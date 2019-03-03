@@ -1,0 +1,11 @@
+.login-form-wrapper {
+    border : 1px solid red;
+    height: 99vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    color: rgb(139, 23, 23)
+}
