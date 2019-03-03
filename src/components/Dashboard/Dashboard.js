@@ -13,7 +13,7 @@ class Dashboard extends Component {
              }
          }
          else{
-             
+             this.props.history.push("/")
          }
     }
     render() { 
