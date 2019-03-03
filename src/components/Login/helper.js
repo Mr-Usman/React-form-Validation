@@ -19,7 +19,7 @@ function validateForm(check ,  data , field , errors) {
                 message : 'Please Specify your full Name.'
               },
               {
-                  condition: /^[a-zA-Z]+(?:-[a-zA-Z]+)*$/.test(name),
+                  condition: !(/^[a-zA-Z]+(?:-[a-zA-Z]+)*$/.test(name)),
                   message : 'Name can not contain any number or any special characters.'
               }
           ],
@@ -28,8 +28,8 @@ function validateForm(check ,  data , field , errors) {
      pass: {
          Validate: [
              {
-                 condition: pass.length < 6,
-                 message: 'Password can not be less than 6 characters.'
+                 condition: pass.length < 4,
+                 message: 'Password can not be less than 4 characters.'
              },
              {
                  condition: name === pass,

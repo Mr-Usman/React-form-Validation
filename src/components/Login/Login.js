@@ -10,7 +10,7 @@ class Login extends Component {
             users: [
                 { id: 0, name: "admin", pass: "admin" },
                 { id: 1, name: "usman", pass: "usman" },
-                { id: 2, name: "ali", pass: "ali123" }
+                { id: 2, name: "hamza", pass: "786786" }
             ],
             isAuth: false,
             currentUser: null,
@@ -57,7 +57,9 @@ class Login extends Component {
       }
       var currentUser = users.filter((user) => user.name === name && user.pass ===pass)
       if(currentUser.length){
+        //   console.log("ok")
           localStorage.setItem("currentUser",JSON.stringify(currentUser[0]))
+          this.props.history.push({pathname : '/dashboard' , state : { isAuth : true} }) // by default we get props of history
       }
     else{
       errors.serverError = "Wrong Credentials";
